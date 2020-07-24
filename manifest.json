@@ -1,0 +1,60 @@
+  {
+    "name": "Youtube audio remote",
+    "version": "1.0",
+    "description": "Controll YouTube volume with global shortcuts",
+    "permissions": [
+      "tabs",
+      "declarativeContent",
+      "https://www.youtube.com/"
+    ],
+    "background": {
+      "page": "background.html",
+      "persistent": false
+    },
+    "page_action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "images/get_started16.png",
+        "32": "images/get_started32.png",
+        "48": "images/get_started48.png",
+        "128": "images/get_started128.png"
+      }
+    },
+    "icons": {
+      "16": "images/get_started16.png",
+      "32": "images/get_started32.png",
+      "48": "images/get_started48.png",
+      "128": "images/get_started128.png"
+    },
+    "commands": {
+      "volume_up": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+0"
+        },
+        "global": true,
+        "description": "Increase volume"
+      },
+      "volume_down": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+9"
+        },
+        "global": true,
+        "description": "Decrease volume"
+      },
+      "volume_up2": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+7"
+        },
+        "global": true,
+        "description": "Increase volume 2x"
+      },
+      "volume_down2": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+8"
+        },
+        "global": true,
+        "description": "Decrease volume 2x"
+      }
+    },
+    "manifest_version": 2
+  }
