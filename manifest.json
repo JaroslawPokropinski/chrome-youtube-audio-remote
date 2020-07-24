@@ -41,14 +41,14 @@
         "global": true,
         "description": "Decrease volume"
       },
-      "volume_up2": {
+      "volume_up2x": {
         "suggested_key": {
           "default": "Ctrl+Shift+7"
         },
         "global": true,
         "description": "Increase volume 2x"
       },
-      "volume_down2": {
+      "volume_down2x": {
         "suggested_key": {
           "default": "Ctrl+Shift+8"
         },
