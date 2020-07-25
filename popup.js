@@ -16,5 +16,8 @@ volumeInput.onchange = function(element) {
     chrome.tabs.executeScript(
         tabs[0].id,
         { code: `document.querySelector('.video-stream').volume = ${parseFloat(volumeInput.value) / 1000};` });
+      chrome.tabs.executeScript(
+        tab.id,
+        { code: `document.querySelector('.ytp-volume-slider-handle').style = "left: " + Math.floor(parseFloat(document.querySelector('.video-stream').volume) * 40 / 0.35) + "px;";` });
   });
 }

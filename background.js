@@ -24,6 +24,11 @@ chrome.commands.onCommand.addListener(function(command) {
           tab.id,
           { code: `document.querySelector('.video-stream').volume += ${cdv};` });
       });
+      tabs.forEach(tab => {
+        chrome.tabs.executeScript(
+          tab.id,
+          { code: `document.querySelector('.ytp-volume-slider-handle').style = "left: " + Math.floor(parseFloat(document.querySelector('.video-stream').volume) * 40 / 0.35) + "px;";` });
+      });
     });
       
     return;
@@ -36,6 +41,11 @@ chrome.commands.onCommand.addListener(function(command) {
         chrome.tabs.executeScript(
           tab.id,
           { code: `if (document.querySelector('.video-stream').volume > ${cdv}) document.querySelector('.video-stream').volume -= ${cdv}; else document.querySelector('.video-stream').volume = 0;` });
+      });
+      tabs.forEach(tab => {
+        chrome.tabs.executeScript(
+          tab.id,
+          { code: `document.querySelector('.ytp-volume-slider-handle').style = "left: " + Math.floor(parseFloat(document.querySelector('.video-stream').volume) * 40 / 0.35) + "px;";` });
       });
     });
       
